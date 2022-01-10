@@ -1,17 +1,25 @@
 # Roughly Enough Characters
 
-![](./src/main/resources/assets/roughly-enough-characters/icon.png)
+![Roughly Enough Characters logo, 参考智能ABC](./src/main/resources/assets/roughly-enough-characters/icon.png)
 
-[JEC](https://github.com/Towdium/JustEnoughCharacters) 的 Fabric 版本。目前支持 1.18。
+为 Minecraft 增加拼音搜索。[JustEnoughCharacters](https://github.com/Towdium/JustEnoughCharacters) 的 Fabric 版本。
 
-大部分代码参考自 [JEC](https://github.com/Towdium/PinIn) ，并使用和 JEC 同样的 [PinIn](https://github.com/Towdium/PinIn) 库实现匹配逻辑。
+大部分代码参考自 JEC，并使用和 JEC 同样的 [PinIn](https://github.com/Towdium/PinIn) 库实现匹配逻辑。
 
-## 兼容性
+## Mod 兼容性
 
-目前兼容以下位置的搜索：
+每个不同 Mod 的每个搜索框都需要单独适配。
+
+目前以下搜索框已适配：
 
 * 创造模式物品栏
 * REI
 * AE2 终端和接口终端
 
-未提及的搜索框不能使用 REC 匹配。如果你想为某个其它 mod 提供支持，请参考 [mixins](./src/main/java/com/oott123/rechars/mixins) 文件夹实现对应，并在 [roughly-enough-characters.mixins.json](./src/main/resources/roughly-enough-characters.mixins.json) 中添加对应的 Mixin Class 即可。
+目前我没有精力接受适配需求，主要适配自己玩的 Mod，但不反对任何人在 Issue 中提出适配需求。
+
+## 开发
+
+如果你想为某个 Mod 增加适配，请参考 [mixins](./src/main/java/com/oott123/rechars/mixins) 文件夹实现对应逻辑，然后在 [roughly-enough-characters.mixins.json](./src/main/resources/roughly-enough-characters.mixins.json) 中添加对应的 Mixin Class 定义即可。
+
+我会定期接受适配的 Pull Request。
