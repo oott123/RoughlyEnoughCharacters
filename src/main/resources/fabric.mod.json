@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "roughly-enough-characters",
+  "version": "${version}",
+  "name": "Roughly Enough Characters",
+  "description": "为 Minecraft 增加拼音搜索，Just Enough Charcaters 的 Fabric 版本",
+  "authors": [
+    "oott123"
+  ],
+  "contact": {
+    "homepage": "https://github.com/oott123/RoughlyEnoughCharacters",
+    "issues": "https://github.com/oott123/RoughlyEnoughCharacters/issues",
+    "sources": "https://github.com/oott123/RoughlyEnoughCharacters"
+  },
+  "license": "GNU Lesser General Public License version 3 (LGPLv3)",
+  "icon": "assets/roughly-enough-characters/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "com.oott123.rechars.ReChars"
+    ]
+  },
+  "mixins": [
+    "roughly-enough-characters.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.18.x",
+    "java": ">=17"
+  }
+}
