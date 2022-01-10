@@ -4,7 +4,7 @@
 
 为 Minecraft 增加拼音搜索。[JustEnoughCharacters](https://github.com/Towdium/JustEnoughCharacters) 的 Fabric 版本。
 
-大部分代码参考自 JEC，并使用和 JEC 同样的 [PinIn](https://github.com/Towdium/PinIn) 库实现匹配逻辑。
+大部分代码参考自 JECH，并使用和 JECH 同样的 [PinIn](https://github.com/Towdium/PinIn) 库实现匹配逻辑。
 
 ## Mod 兼容性
 
