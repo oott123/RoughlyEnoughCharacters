@@ -15,3 +15,7 @@ tab_width = 2
 
 [*.bat]
 end_of_line = crlf
+
+[*.json]
+indent_size = 2
+tab_width = 2

@@ -20,6 +20,8 @@ dependencies {
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
+    // Fabric API. This is not required to run this mod, but useful when debugging.
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	modImplementation 'com.github.Towdium:PinIn:1.5.0'
 	include 'com.github.Towdium:PinIn:1.5.0'
 }

@@ -3,13 +3,12 @@
   "minVersion": "0.8",
   "package": "com.oott123.rechars.mixins",
   "compatibilityLevel": "JAVA_16",
-  "mixins": [
-  ],
   "client": [
     "REITextSearch",
     "VanillaTextSearch",
     "AppliedEnergisticsCommonRepo",
-    "AppliedEnergisticsInterfaceTerminal"
+    "AppliedEnergisticsInterfaceTerminal",
+    "ControllingKeyBindsScreen"
   ],
   "injectors": {
     "defaultRequire": 1
