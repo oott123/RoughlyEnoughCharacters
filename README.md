@@ -17,9 +17,10 @@
 目前以下搜索框已适配：
 
 * 创造模式物品栏
-* REI
+* REI 物品
 * AE2 终端和接口终端
-* Controlling 键位搜索
+* Controlling
+* ModMenu
 
 目前我没有精力接受适配需求，主要适配自己玩的 Mod，但不反对任何人在 Issue 中提出适配需求。
 
