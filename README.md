@@ -21,6 +21,7 @@
 * AE2 终端和接口终端
 * Controlling
 * ModMenu
+* MaLiLib
 
 目前我没有精力接受适配需求，主要适配自己玩的 Mod，但不反对任何人在 Issue 中提出适配需求。
 

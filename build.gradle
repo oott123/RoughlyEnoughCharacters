@@ -12,6 +12,7 @@ group = project.maven_group
 
 repositories {
 	maven { url 'https://jitpack.io' }
+    maven { url 'https://www.cursemaven.com' }
 }
 
 dependencies {
@@ -24,6 +25,7 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	modImplementation 'com.github.Towdium:PinIn:1.5.0'
 	include 'com.github.Towdium:PinIn:1.5.0'
+    modImplementation 'curse.maven:malilib-244260:3544210'
 }
 
 processResources {

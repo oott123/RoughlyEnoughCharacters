@@ -9,7 +9,8 @@
     "AppliedEnergisticsCommonRepo",
     "AppliedEnergisticsInterfaceTerminal",
     "ControllingKeyBindsScreen",
-    "ModMenuModSearch"
+    "ModMenuModSearch",
+    "MaLiLibWidgetListConfigOptions"
   ],
   "injectors": {
     "defaultRequire": 1
