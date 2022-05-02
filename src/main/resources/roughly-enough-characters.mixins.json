@@ -9,7 +9,8 @@
     "AppliedEnergisticsCommonRepo",
     "AppliedEnergisticsInterfaceTerminal",
     "ControllingKeyBindsScreen",
-    "ModMenuModSearch"
+    "ModMenuModSearch",
+    "SlotlinkRequestScreenFilter"
   ],
   "injectors": {
     "defaultRequire": 1

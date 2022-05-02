@@ -2,6 +2,7 @@
 
 package com.oott123.rechars.helpers;
 
+import com.oott123.rechars.ReChars;
 import me.towdium.pinin.DictLoader;
 import me.towdium.pinin.PinIn;
 import me.towdium.pinin.searchers.TreeSearcher;
