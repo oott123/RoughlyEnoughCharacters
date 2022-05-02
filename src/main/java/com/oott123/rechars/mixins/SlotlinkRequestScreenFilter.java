@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Pseudo
 @Mixin(targets = {"badasintended.slotlink.screen.RequestScreenHandler$Filter"})
 public class SlotlinkRequestScreenFilter {
-    @Redirect(method = {"match"}, at = @At(value = "INVOKE", target = "Lkotlin/text/StringsKt;contains(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z"))
+    @Redirect(method = {"match"}, at = @At(value = "INVOKE", target = "Lkotlin/text/StringsKt;contains(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z", remap = false))
     private boolean proxyStringKtContains(CharSequence haystack, CharSequence needle, boolean ignoreCase) {
         return MatchHelper.contains(haystack, needle, ignoreCase);
     }
