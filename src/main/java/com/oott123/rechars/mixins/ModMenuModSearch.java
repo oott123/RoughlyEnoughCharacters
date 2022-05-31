@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Pseudo
 @Mixin(targets = {"com.terraformersmc.modmenu.util.mod.ModSearch"})
 public abstract class ModMenuModSearch {
-    @Redirect(method = {"passesFilters"}, at = @At(value = "INVOKE", target = "Ljava/lang/String;contains(Ljava/lang/CharSequence;)Z"))
+    @Redirect(method = {"passesFilters"}, at = @At(value = "INVOKE", target = "Ljava/lang/String;contains(Ljava/lang/CharSequence;)Z"), remap = false)
     private static boolean proxyStringContains(String haystack, CharSequence needle) {
         return MatchHelper.contains(haystack, needle);
     }

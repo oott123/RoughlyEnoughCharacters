@@ -16,7 +16,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
     "me.shedaniel.rei.impl.client.search.argument.type.TooltipArgumentType"
 })
 public class REITextSearch {
-    @Redirect(method = {"matches"}, at = @At(value = "INVOKE", target = "Ljava/lang/String;contains(Ljava/lang/CharSequence;)Z"))
+    @Redirect(method = {"matches"}, at = @At(value = "INVOKE", target = "Ljava/lang/String;contains(Ljava/lang/CharSequence;)Z"), remap = false)
     private boolean proxyStringContains(String haystack, CharSequence needle) {
         return MatchHelper.contains(haystack, needle);
     }

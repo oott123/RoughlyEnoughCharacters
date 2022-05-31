@@ -22,7 +22,8 @@ public class AppliedEnergeticsSearchPredicates {
         at = @At(
             value = "INVOKE",
             target = "Ljava/util/regex/Pattern;matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;"
-        )
+        ),
+        remap = false
     )
     private static Matcher proxyPatternMatcher(Pattern pattern, CharSequence sequence) {
         return MatchHelper.matcher(pattern, sequence);

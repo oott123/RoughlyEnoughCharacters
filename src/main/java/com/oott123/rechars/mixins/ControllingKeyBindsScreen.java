@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Pseudo
 @Mixin(targets = {"com.blamejared.controlling.client.NewKeyBindsScreen"})
 public abstract class ControllingKeyBindsScreen {
-    @Redirect(method = {"/^lambda\\$filterKeys/"}, at = @At(value = "INVOKE", target = "Ljava/lang/String;contains(Ljava/lang/CharSequence;)Z"))
+    @Redirect(method = {"/^lambda\\$filterKeys/"}, at = @At(value = "INVOKE", target = "Ljava/lang/String;contains(Ljava/lang/CharSequence;)Z"), remap = false)
     private boolean proxyStringContains(String haystack, CharSequence needle) {
         return MatchHelper.contains(haystack, needle);
     }
