@@ -1,6 +1,7 @@
 plugins {
 	id 'fabric-loom' version '0.10-SNAPSHOT'
 	id 'maven-publish'
+    id "com.modrinth.minotaur" version "2.+"
 }
 
 sourceCompatibility = JavaVersion.VERSION_17
@@ -67,4 +68,15 @@ publishing {
 		// The repositories here will be used for publishing your artifact, not for
 		// retrieving dependencies.
 	}
+}
+
+modrinth {
+    projectId = "y6h3fkEO"
+    versionType = "alpha"
+    uploadFile = remapJar
+    featured = true
+    loaders = ["fabric"]
+    versionName = "${project.mod_version} (${project.minecraft_version})"
+    versionNumber = "${project.mod_version}+${project.minecraft_version}-fabric${project.loader_version}"
+    gameVersions = ["${project.minecraft_version}"]
 }
