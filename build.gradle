@@ -74,7 +74,6 @@ modrinth {
     projectId = "y6h3fkEO"
     versionType = "alpha"
     uploadFile = remapJar
-    featured = true
     loaders = ["fabric"]
     versionName = "${project.mod_version} (${project.minecraft_version})"
     versionNumber = "${project.mod_version}+${project.minecraft_version}-fabric${project.loader_version}"
