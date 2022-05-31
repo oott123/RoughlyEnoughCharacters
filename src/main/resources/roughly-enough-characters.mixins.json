@@ -6,8 +6,8 @@
   "client": [
     "REITextSearch",
     "VanillaTextSearch",
-    "AppliedEnergisticsCommonRepo",
-    "AppliedEnergisticsInterfaceTerminal",
+    "AppliedEnergeticsSearchPredicates",
+    "AppliedEnergeticsInterfaceTerminal",
     "ControllingKeyBindsScreen",
     "ModMenuModSearch"
   ],

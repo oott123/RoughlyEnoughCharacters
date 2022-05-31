@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @SuppressWarnings("UnresolvedMixinReference")
 @Pseudo
 @Mixin(targets = {"appeng.client.gui.me.interfaceterminal.InterfaceTerminalScreen"})
-public class AppliedEnergisticsInterfaceTerminal {
+public class AppliedEnergeticsInterfaceTerminal {
     @Redirect(method = {"refreshList", "itemStackMatchesSearchTerm"}, at = @At(value = "INVOKE", target = "Ljava/lang/String;contains(Ljava/lang/CharSequence;)Z"))
     private boolean proxyStringContains(String haystack, CharSequence needle) {
         return MatchHelper.contains(haystack, needle);
