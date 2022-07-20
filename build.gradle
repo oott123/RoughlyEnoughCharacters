@@ -13,6 +13,7 @@ group = project.maven_group
 
 repositories {
 	maven { url 'https://jitpack.io' }
+    maven { url 'https://dvs1.progwml6.com/files/maven/' }
 }
 
 dependencies {
@@ -23,6 +24,7 @@ dependencies {
 
     // Fabric API. This is not required to run this mod, but useful when debugging.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    modCompileOnly  "mezz.jei:jei-${minecraft_version}-fabric:10.1.0.228"
 	modImplementation 'com.github.Towdium:PinIn:1.5.0'
 	include 'com.github.Towdium:PinIn:1.5.0'
 }

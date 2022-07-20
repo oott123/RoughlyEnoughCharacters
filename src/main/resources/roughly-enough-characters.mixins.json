@@ -9,7 +9,10 @@
     "AppliedEnergeticsSearchPredicates",
     "AppliedEnergeticsInterfaceTerminal",
     "ControllingKeyBindsScreen",
-    "ModMenuModSearch"
+    "ModMenuModSearch",
+    "TomSimpleStorage",
+    "MixinJeiSearch",
+    "MixinJeiSearchLowMemory"
   ],
   "injectors": {
     "defaultRequire": 0
