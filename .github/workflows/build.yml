@@ -32,6 +32,8 @@ jobs:
       - name: Upload to modrinth
         if: startsWith(github.ref, 'refs/tags/')
         run: ./gradlew modrinth
+        env:
+          MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
   release:
     name: Release
     runs-on: ubuntu-latest
