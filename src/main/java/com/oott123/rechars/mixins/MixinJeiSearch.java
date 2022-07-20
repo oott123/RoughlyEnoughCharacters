@@ -1,7 +1,6 @@
 package com.oott123.rechars.mixins;
 
 import com.oott123.rechars.stubs.FakeTree;
-import mezz.jei.common.search.ElementPrefixParser;
 import mezz.jei.core.search.suffixtree.GeneralizedSuffixTree;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Pseudo;
@@ -11,11 +10,11 @@ import org.spongepowered.asm.mixin.injection.ModifyArg;
 import java.util.function.Supplier;
 
 @Pseudo
-@Mixin(value = ElementPrefixParser.class)
+@Mixin(targets = {"mezz.jei.common.search.ElementPrefixParser"})
 public abstract class MixinJeiSearch {
 
     @ModifyArg(method = "<clinit>", at = @At(value = "INVOKE", target = "Lmezz/jei/core/search/PrefixInfo;<init>(CLmezz/jei/core/search/PrefixInfo$IModeGetter;Lmezz/jei/core/search/PrefixInfo$IStringsGetter;Ljava/util/function/Supplier;)V"), remap = false)
-    private static Supplier<GeneralizedSuffixTree<?>> modifyConstructorClInit(Supplier<?> supplier) {
+    private static Supplier<?> modifyConstructorClInit(Supplier<?> supplier) {
         return FakeTree::new;
     }
 
