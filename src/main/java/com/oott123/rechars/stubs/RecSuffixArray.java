@@ -23,7 +23,7 @@ public class RecSuffixArray<T> extends SuffixArray<T> {
 
     @Override
     public List<T> findAll(String text) {
-        var result = searcher.search(text);
+        List<T> result = searcher.search(text);
         ReChars.LOGGER.debug(String.format("Searching %s using SuffixArray, matched: %d", text, result.size()));
         return result;
     }

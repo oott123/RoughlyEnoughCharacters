@@ -11,13 +11,14 @@ import java.util.regex.Pattern;
 
 @SuppressWarnings("UnresolvedMixinReference")
 @Pseudo
-@Mixin(targets = {"appeng.client.gui.me.search.SearchPredicates"})
-public class AppliedEnergeticsSearchPredicates {
+@Mixin(targets = {
+    "appeng.client.gui.me.fluids.FluidRepo",
+    "appeng.client.gui.me.items.ItemRepo"
+})
+public class AppliedEnergeticsRepo {
     @Redirect(
         method = {
-            "/lambda\\$createModIdPredicate/",
-            "/lambda\\$createNamePredicate/",
-            "/lambda\\$createTooltipPredicate/"
+            "matchesSearch"
         },
         at = @At(
             value = "INVOKE",
@@ -25,7 +26,7 @@ public class AppliedEnergeticsSearchPredicates {
         ),
         remap = false
     )
-    private static Matcher proxyPatternMatcher(Pattern pattern, CharSequence sequence) {
+    private Matcher proxyPatternMatcher(Pattern pattern, CharSequence sequence) {
         return MatchHelper.matcher(pattern, sequence);
     }
 }

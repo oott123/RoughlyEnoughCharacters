@@ -1,11 +1,11 @@
 plugins {
-	id 'fabric-loom' version '0.10-SNAPSHOT'
+	id 'fabric-loom' version '0.7-SNAPSHOT'
 	id 'maven-publish'
     id "com.modrinth.minotaur" version "2.+"
 }
 
-sourceCompatibility = JavaVersion.VERSION_17
-targetCompatibility = JavaVersion.VERSION_17
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
 
 archivesBaseName = "${project.archives_base_name}"
 version = "${project.mod_version}+${project.minecraft_version}-fabric${project.loader_version}"
@@ -13,7 +13,6 @@ group = project.maven_group
 
 repositories {
 	maven { url 'https://jitpack.io' }
-    maven { url 'https://dvs1.progwml6.com/files/maven/' }
 }
 
 dependencies {
@@ -24,7 +23,6 @@ dependencies {
 
     // Fabric API. This is not required to run this mod, but useful when debugging.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-    modCompileOnly  "mezz.jei:jei-${minecraft_version}-fabric:10.1.0.228"
 	modImplementation 'com.github.Towdium:PinIn:1.5.0'
 	include 'com.github.Towdium:PinIn:1.5.0'
 }
@@ -38,8 +36,7 @@ processResources {
 }
 
 tasks.withType(JavaCompile).configureEach {
-	// Minecraft 1.18 (1.18-pre2) upwards uses Java 17.
-	it.options.release = 17
+    it.options.encoding = "UTF-8"
 }
 
 java {

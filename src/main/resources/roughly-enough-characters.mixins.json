@@ -2,17 +2,15 @@
   "required": false,
   "minVersion": "0.8",
   "package": "com.oott123.rechars.mixins",
-  "compatibilityLevel": "JAVA_16",
+  "compatibilityLevel": "JAVA_8",
   "client": [
     "REITextSearch",
     "VanillaTextSearch",
-    "AppliedEnergeticsSearchPredicates",
+    "AppliedEnergeticsRepo",
     "AppliedEnergeticsInterfaceTerminal",
     "ControllingKeyBindsScreen",
     "ModMenuModSearch",
-    "TomSimpleStorage",
-    "MixinJeiSearch",
-    "MixinJeiSearchLowMemory"
+    "TomSimpleStorage"
   ],
   "injectors": {
     "defaultRequire": 0

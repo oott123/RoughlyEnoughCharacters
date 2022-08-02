@@ -9,11 +9,8 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @SuppressWarnings("UnresolvedMixinReference")
 @Pseudo
 @Mixin(targets = {
-    "me.shedaniel.rei.impl.client.search.argument.type.IdentifierArgumentType",
-    "me.shedaniel.rei.impl.client.search.argument.type.ModArgumentType",
-    "me.shedaniel.rei.impl.client.search.argument.type.TagArgumentType",
-    "me.shedaniel.rei.impl.client.search.argument.type.TextArgumentType",
-    "me.shedaniel.rei.impl.client.search.argument.type.TooltipArgumentType"
+    "me.shedaniel.rei.impl.search.TextArgument",
+    "me.shedaniel.rei.impl.search.TooltipArgument"
 })
 public class REITextSearch {
     @Redirect(method = {"matches"}, at = @At(value = "INVOKE", target = "Ljava/lang/String;contains(Ljava/lang/CharSequence;)Z"), remap = false)
