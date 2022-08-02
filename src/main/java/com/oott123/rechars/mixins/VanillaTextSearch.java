@@ -17,7 +17,7 @@ import java.util.stream.Stream;
 @Mixin({TextSearchableContainer.class})
 public abstract class VanillaTextSearch<T> extends IdentifierSearchableContainer<T> {
     @Shadow
-    private SuffixArray<T> byText;
+    protected SuffixArray<T> byText;
 
     public VanillaTextSearch(Function<T, Stream<Identifier>> identifierFinder) {
         super(identifierFinder);

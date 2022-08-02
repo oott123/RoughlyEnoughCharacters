@@ -39,13 +39,11 @@ public class MatchHelper {
 
     public static boolean contains(CharSequence haystack, CharSequence needle, boolean caseInsensitive) {
         if (caseInsensitive) {
-            var result = contains(haystack.toString().toLowerCase(), needle.toString().toLowerCase());
             // ReChars.LOGGER.debug(String.format("Searching %s in %s case insensitive, matched: %b", needle, haystack, result));
-            return result;
+            return contains(haystack.toString().toLowerCase(), needle.toString().toLowerCase());
         } else {
-            var result = contains(haystack, needle);
+            return contains(haystack, needle);
             // ReChars.LOGGER.debug(String.format("Searching %s in %s case sensitive, matched: %b", needle, haystack, result));
-            return result;
         }
     }
 
