@@ -17,7 +17,6 @@
 目前以下搜索框已适配：
 
 * 创造模式物品栏
-* REI
 * AE2 终端和接口终端
 * Controlling
 * ModMenu
