@@ -15,7 +15,8 @@
     "MixinJeiSearchLowMemory",
     "EmiSearchContains",
     "EmiSearchRegex",
-    "MixinMaLiLibWidgetListConfigOptions"
+    "MixinMaLiLibWidgetListConfigOptions",
+    "MixinXaeroMinimapGuiSettings"
   ],
   "injectors": {
     "defaultRequire": 0
